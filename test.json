@@ -1,0 +1,70 @@
+// WHAT I SENT AS A DELIVERY REQUEST BODY
+{
+    "amount": "20",
+    "customerId": "0543529618",
+    "customer_name": "Mr. Joe",
+    "deliver_before": "2019-03-02T17:00:00.000Z",
+    "delivery_fee": "0",
+    "delivery_type": "delivery",
+    "description": "This is another delivery request just to test out the directions ploting",
+    "destination": {
+        "from_longitude": 5.6037168,
+        "from_latitude": -0.1869644,
+        "to_longitude": 5.547561399999999,
+        "to_latitude": -0.3808414999999741
+    },
+    "email": "joe@junk.com",
+    "invoiceId": "INV#00004",
+    "leave_it": true,
+    "location": "Kasoa ",
+    "orderId": "ORD#4",
+    "phone_number": "0543529618",
+    "processing_fee": "0",
+    "product_info": "Stuff",
+    "promo_code": "0",
+    "quantity": "1",
+    "tax": "0",
+    "unit_of_weight": "kg",
+    "weight": "3.4"
+}
+
+// WHAT YOU SAVED IN THE DB AND RETURNED TO ME
+
+{
+    "delivery_requests": {
+        "records": [
+            {
+                "id": 5,
+                "customer_name": "Mr. Joe",
+                "phone_number": "0543529618",
+                "leave_it": true,
+                "promo_code": "0",
+                "quantity": 1,
+                "weight": 3.4,
+                "weight_unit": "kg",
+                "deliver_before": "2019-03-02T17:00:00.000Z",
+                "delivery_type": "delivery",
+                "customer_id": null,
+                "fleet_owner_id": 1,
+                "back_officer_id": null,
+                "extra_info": null,
+                "created_at": "2019-03-02T08:48:05.126Z",
+                "updated_at": "2019-03-02T08:48:05.126Z",
+                "reference": "208631551516485",
+                "description": null,
+                "from_longitude": 5.6037168,
+                "from_latitude": -0.1869644,
+                "estimate_amount": null,
+                "paid_amount": null,
+                "to_longitude": -0.380841499999974,
+                "to_latitude": -0.380841499999974,
+                "from_name": null,
+                "to_name": null,
+                "status": "unassigned",
+                "courier_id": null,
+                "invoice_id": null
+            }
+        ],
+
+    }
+}

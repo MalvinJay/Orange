@@ -1,0 +1,13 @@
+// deliveries
+export const TICKETS_FETCH = 'getTickets'
+export const CREATE_TICKET = 'createTicket'
+export const UPDATE_TICKET = 'updateTicket'
+export const SET_TICKETS = 'setTickets'
+export const DELETE_TICKET = 'deleteTicket'
+export const SET_TICKETS_STATE = 'setTicketsState'
+export const SET_TICKETS_META = 'setTicketsMeta'
+export const SET_TICKETS_FILTERS = 'setTicketsFilters'
+export const GET_CURRENT_TICKET = 'getCurrentTicket'
+export const SET_CURRENT_TICKET = 'setCurrentTicket'
+export const SET_CURRENT_TICKET_STATE = 'setCurrentTicketState'
+export const SEARCH_TICKETS = 'searchTickets'

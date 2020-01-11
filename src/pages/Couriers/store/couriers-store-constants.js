@@ -1,0 +1,12 @@
+// courier
+export const CREATE_COURIER = 'createCourier'
+export const UPDATE_COURIER = 'updateCourier'
+export const COURIERS_FETCH = 'getCouriers'
+export const SET_COURIERS = 'setCouriers'
+export const DELETE_COURIER = 'deleteCourier'
+export const SET_COURIERS_STATE = 'setCouriersState'
+export const SET_COURIERS_META = 'setCouriersMeta'
+export const SET_COURIERS_FILTERS = 'setCouriersFilters'
+export const GET_CURRENT_COURIER = 'getCurrentCourier'
+export const SET_CURRENT_COURIER = 'setCurrentCourier'
+export const SET_CURRENT_COURIER_STATE = 'setCurrentCourierState'

@@ -1,0 +1,12 @@
+@import 'general.scss';
+@import 'element-ui.scss';
+
+.pac-container {
+    z-index: 3000!important;
+    font-family: "Lato", Verdana, sans-serif !important;
+}
+.pac-container.pac-logo.hdpi {
+    &:active, &:focus {
+        display: block!important;
+    }
+}

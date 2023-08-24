@@ -39,48 +39,48 @@ let router = new Router({
         {
           path: '/',
           name: 'Site',
-          component: Site,
-        },        
+          component: Site
+        },
         {
           path: '/about',
           name: 'About',
-          component: About,
+          component: About
         },
         {
           path: '/careers',
           name: 'Careers',
-          component: Careers,
+          component: Careers
         },
         {
           path: '/support',
           name: 'Support',
-          component: Support,
+          component: Support
         },
         {
           path: '/contacts',
           name: 'Contacts',
-          component: Contacts,
-        },        
+          component: Contacts
+        }
       ]
     },
     {
       path: '/signup',
       name: 'Signup',
-      component: Signup,
-    },    
+      component: Signup
+    },
     {
       path: '/login',
       name: 'Login',
       component: Login,
       meta: {
         guest: true
-      }      
-    },   
+      }
+    },
     {
       path: '/reset-password',
       name: 'ResetPassword',
-      component: ResetPassword,
-    }, 
+      component: ResetPassword
+    },
     {
       path: '/app/',
       name: 'App',
@@ -92,77 +92,80 @@ let router = new Router({
         {
           path: '/app/dashboard',
           name: 'Dashboard',
-          component: Dashboard,
-        }, 
+          component: Dashboard
+        },
         {
           path: '/app/live_track',
           name: 'LiveTrack',
-          component: LiveTrack,
+          component: LiveTrack
         },
         {
           path: '/app/vehicles',
           name: 'Vehicles',
-          component: Vehicles,
-        }, 
+          component: Vehicles
+        },
         {
           path: '/app/couriers',
           name: 'Couriers',
-          component: Couriers,
-        },  
+          component: Couriers
+        },
         {
           path: '/app/deliveries',
           name: 'Deliveries',
-          component: Deliveries,
+          component: Deliveries
         },
         {
           path: '/app/earnings',
           name: 'Earnings',
-          component: Earnings,
+          component: Earnings
         },
         {
           path: '/app/reports',
           name: 'Reports',
-          component: Reports,
-        },     
+          component: Reports
+        },
         {
           path: '/app/settings',
           name: 'Settings',
-          component: Settings,
-        },                  
-        {
-          path: '/404', 
-          component: NotFound 
+          component: Settings
         },
-        { path: '*', redirect: '/app/dashboard'},
-        { path: '404', name: 'Comin_Soon', component: ComingSoon }                           
+        {
+          path: '/404',
+          component: NotFound
+        },
+        {
+          path: '*',
+          redirect: '/app/dashboard'
+        },
+        { path: '404', name: 'Comin_Soon', component: ComingSoon }
       ]
-    },      
+    }
   ]
 })
 
-router.beforeEach((to, from, next) => {
-  console.log('to route', to)
+// router.beforeEach((to, from, next) => {
+//   console.log('to route', to)
 
-  EventBus.$emit('sideNavClick', to.name)
+//   EventBus.$emit('sideNavClick', to.name)
 
-  if (to.matched.some(record => record.meta.requiresAuth)) {
-    if (localStorage.getItem('client_secret') === '' || localStorage.getItem('client_secret') === null) {
-      next({
-        path: '/login',
-        params: { nextUrl: to.fullPath }
-      })
-    } else {
-      next()
-    }
-  } else if (to.matched.some(record => record.meta.guest)) {
-    if (localStorage.getItem('client_secret') === '' || localStorage.getItem('client_secret') === null) {
-      next()
-    } else {
-      next({ name: 'LiveTrack'})
-    }
-  } else {
-    next()
-  }
-})
+//   if (to.matched.some(record => record.meta.requiresAuth)) {
+//     if (localStorage.getItem('client_secret') === '' || localStorage.getItem('client_secret') === null) {
+//       next({
+//         path: '/login',
+//         params: { nextUrl: to.fullPath }
+//       })
+//     } else {
+//       next()
+//     }
+//   } else if (to.matched.some(record => record.meta.guest)) {
+//     if (localStorage.getItem('client_secret') === '' || localStorage.getItem('client_secret') === null) {
+//       next()
+//     } else {
+//       next({ name: 'LiveTrack'})
+//     }
+//   } else {
+//     next()
+//   }
+// })
 
 export default router
